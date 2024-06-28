@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+    --Primary: #072ac8;
+    --PrimaryLight: #a2d6f9;
+    --PrimaryLighter: #d1edff;
+    --SecondaryLight: #fce300;
+    --SecondaryDark: #ffc600;
+    --NeutralLight: #f4f6fc;
+    --NeutralMedium: #6b708d;
+    --NeutralDark: #292e47;
+    --Wrong: #b33a3a;
+    --Right: #28a428;
+    --White: #fff;
+    --Black: #000;
+    --Background: #f2f4fc;
+}
+
+html,
+body {
+    text-align: center;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    background: var(--Background);
+    font-family: "Roboto", sans-serif;
+    max-width: 1200px;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--NeutralDark);
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 20px;
+    color: var(--NeutralDark);
+    font-weight: normal;
+    margin-bottom: 40px;
+}
+
+h4 {
+    font-size: 24px;
+    color: var(--NeutralDark);
+}
+
+a {
+    text-decoration: none;
+    color: var(--NeutralMedium);
+}
+ a:hover {
+    color: var(--Primary);
+    text-decoration: none;
+  }
+.logo {
+    width: 60px;
+
+    img {
+        width: 60px;
+    }
+}
+
+.header-nav {
+    margin: 30px auto ;
+    width: 85%;
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    .btn{
+        margin: 10px;
+    }
+}
+
+.header-nav-links {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+
+    li {
+        margin: 20px;
+    }
+}
+
+.nav-link {
+    color: var(--NeutralMedium);
+}
+
+.nav-link:hover {
+    color: var(--Primary);
+    cursor: pointer;
+}
+
+.nav-link-selected {
+    color: var(--Primary);
+}
+
+.btn {
+    background-color: var(--Primary);
+    color: var(--White);
+    display: inline;
+    margin: 30px;
+    padding: 15px;
+    width: 100px;
+    .nav-link-selected {
+    color: var(--Primary);
+}
+}
+
+a.btn:hover {
+    color: var(--SecondaryDark);
+    text-decoration: none;
+}
+
+
+.recent-projects{
+    position: relative;
+    width: 85%;
+    height: 400px;
+    visibility:visible;
+
+    h2 {
+        text-align: left;
+        margin-bottom: 40px;
+    }
+    project-card{
+        margin: 50px;
+    }
+    .projects-container{
+        display: flex;
+        flex-direction: row;
+        align-content:flex-start;
+        align-items: left;
+        .project-card{
+            margin: 0 50px 0 0;
+        }
+    }
+}
