@@ -5,47 +5,71 @@
   height: 700px;
   display: flex;
   flex-direction: row;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: space-between;
 
   .hero-content {
     text-align: left;
-    .hero.content-buttons {
+    width: 50%;
+    height: 60%;
+
+    .hero-content-links {
       margin: 0;
+      width: 300px;
+      height: 40px;
       display: flex;
       flex-direction: row;
+      .btn{
+        margin-left:0 ;
+        margin-top: 0;
+        margin-right: 20px;
+      }
+      a {
+        margin: 0;
+        padding: 20px;
+        height: 20px;
+      }
+      a:hover{
+        text-decoration: underline;
+      }
+    }
+
+  }
+
+  .hero-image {
+    position: relative;
+    width: 50%;
+
+    .img-hero {
+      width: 600px;
+      max-width: 100%;
+    }
+
+    .img-card-top {
+      position: absolute;
+      background-color: transparent;
+      max-width: 250px;
+      top: 0%;
+      left: -10%;
+    }
+
+    .img-card-bottom {
+      position: absolute;
+      background-color: transparent;
+      max-width: 250px;
+      right: -10%;
+      bottom: -10%;
     }
   }
 }
 
-.hero-image {
-  position: relative;
-  .img-hero {
-    width: 600px;
-    max-width: 100%;
-  }
-
-  .img-card-top {
-    position: absolute;
-    background-color: transparent;
-    max-width: 250px;
-    top: -15%;
-    left: -15%;
-  }
-  
-  .img-card-bottom{
-    position: absolute;
-    background-color: transparent;
-    max-width: 250px;
-    right: -20%;
-    bottom: -25%;
-  }
-}
-
-.clients{
+.clients {
   width: 85%;
+  position: relative;
   display: flex;
   flex-direction: row;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: space-between;
   gap: 60px;
@@ -54,7 +78,7 @@
 
 
 .img-client {
-  width: 105px;
+  width: 100px;
   margin: 0 auto;
   filter: grayscale(1);
   transition: width 1s, height 1s;
@@ -64,4 +88,29 @@
   filter: grayscale(0);
   width: 150px;
   transition: width 0.5s, height 0.5s;
+}
+
+.testimonial{
+  position: relative;
+  background-color:chartreuse;
+  height: 300px;
+  margin-bottom: 100px;
+}
+#services{
+  position: relative;
+  background-color:blueviolet;
+  height: 300px;
+  margin-bottom: 100px;
+}
+#newsletter{
+  position: relative;
+  background-color: bisque;
+  height: 300px;
+  margin-bottom: 100px;
+}
+.footer{
+  position: relative;
+  background-color:cadetblue;
+  height: 300px;
+  margin-bottom: 100px;
 }

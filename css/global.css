@@ -32,7 +32,7 @@ body {
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 700;
     margin-bottom: 20px;
     color: var(--NeutralDark);
@@ -58,20 +58,22 @@ a {
     text-decoration: none;
     color: var(--NeutralMedium);
 }
- a:hover {
+
+a:hover {
     color: var(--Primary);
     text-decoration: none;
-  }
+}
+
 .logo {
     width: 60px;
-
+    
     img {
-        width: 60px;
+        width: 100%;
     }
 }
 
 .header-nav {
-    margin: 30px auto ;
+    margin: 30px auto;
     width: 85%;
     font-size: 18px;
     display: flex;
@@ -79,32 +81,31 @@ a {
     align-items: center;
     flex-wrap: nowrap;
     justify-content: space-between;
-    .btn{
+
+    .btn {
         margin: 10px;
     }
-}
-
-.header-nav-links {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-
-    li {
-        margin: 20px;
+    .header-nav-links {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+    
+        li {
+            margin: 20px;
+        }
+        
     }
-}
-
-.nav-link {
-    color: var(--NeutralMedium);
-}
-
-.nav-link:hover {
-    color: var(--Primary);
-    cursor: pointer;
-}
-
-.nav-link-selected {
-    color: var(--Primary);
+    .nav-link {
+        color: var(--NeutralMedium);
+    }
+    .nav-link:hover {
+        color: var(--Primary);
+        cursor: pointer;
+        text-decoration:underline;
+    }
+    .nav-link-selected {
+        color: var(--Primary);
+    }
 }
 
 .btn {
@@ -114,9 +115,6 @@ a {
     margin: 30px;
     padding: 15px;
     width: 100px;
-    .nav-link-selected {
-    color: var(--Primary);
-}
 }
 
 a.btn:hover {
@@ -125,26 +123,77 @@ a.btn:hover {
 }
 
 
-.recent-projects{
+.recent-projects {
     position: relative;
     width: 85%;
     height: 400px;
-    visibility:visible;
-
+    visibility: visible;
+    margin-bottom: 150px;
     h2 {
         text-align: left;
-        margin-bottom: 40px;
+        margin-bottom: 50px;
+        margin-left: 20px;
     }
-    project-card{
-        margin: 50px;
-    }
-    .projects-container{
+
+    .projects-container {
         display: flex;
         flex-direction: row;
-        align-content:flex-start;
+        flex-flow: row wrap;
+        align-content: flex-start;
         align-items: left;
-        .project-card{
-            margin: 0 50px 0 0;
+
+        .project-card {
+            margin: 0 20px 0 20px;
+            margin-bottom: 30px;
+
+            .img-project {
+                width: 300px;
+                height: 200px;
+                margin-bottom: 10px;
+            }
+
+            .project-wrapper {
+                background-color: var(--white);
+                border-color: var(--NeutralLight);
+
+            }
+
+            .project-inner-card {
+                .project-title {
+                    padding-bottom: 10px;
+                    padding-left: 20px;
+                }
+
+                .project-description {
+                    padding-bottom: 50px;
+                    padding-left: 20px;
+                    color: var(--NeutralMedium);
+                }
+
+                .learn-more p {
+                    color: val(--Primary);
+                }
+
+                .learn-more p {
+                    padding-bottom: 20px;
+                    padding-left: 20px;
+
+                }
+            }
+
+        }
+
+        .project-card,
+        .project-card h4,
+        .project-card p,
+        .project-card a {
+            background-color: var(--White);
+            text-align: left;
+            color: var(--Black);
         }
     }
+}
+.project-card:hover,
+.services-card:hover {
+    box-shadow: 10px 5px 5px var(--NeutralMedium);
 }
