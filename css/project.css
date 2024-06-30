@@ -1,0 +1,61 @@
+
+#project{
+    .project-image-section {
+        width: 100%;
+        margin-top: 4%;
+        margin-bottom: 7%;
+      }
+      .project-image {
+        width: 84%;
+        height: 40vh;
+        object-fit: cover;
+        filter: drop-shadow(5px 5px 20px #c414ca74);
+      }
+      .project-description {
+        font-family: Roboto;
+        color: var(--NeutralMedium);
+        margin-bottom: 7%;
+        text-align: left;
+        background-color: var(--NeutralLight);
+        margin-left: 40px;
+        margin-right: 40px;
+        font-size: 11px;
+      }
+      .title {
+        text-align: left;
+        font-size: 35px;
+        margin-left: 40px;
+        margin-top: 10%;
+      }
+      
+      .subtitle {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 40px;
+      }
+      
+      .UI-design-title {
+        color: var(--NeutralMedium);
+        font-size: 12px;
+        margin: 0;
+      }
+      
+      .completed-title {
+        color: var(--NeutralDark);
+        font-size: 10px;
+        margin: 0;
+      }
+      
+      .completed-title-data {
+        color: var(--NeutralMedium);
+        font-size: 10px;
+        margin: 0;
+        margin-right: 40px;
+      }
+}
+
+  
+  
+  
+ 
+  

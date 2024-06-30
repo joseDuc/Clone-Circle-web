@@ -196,21 +196,56 @@
 
 #services {
   position: relative;
-  background-color: blueviolet;
-  height: 300px;
-  margin-bottom: 100px;
+  width: 85%;
+  height: 400px;
+  margin-bottom: 150px;
+
+  h2 {
+    text-align: left;
+    margin-bottom: 50px;
+    margin-left: 20px;
+ }
+
+  .services-container{
+    display: flex;
+    flex-direction: row wrap;
+    align-content: flex-start;
+    align-items: left;
+
+    .services-card,
+    .services-card h4,
+    .services-card p,
+    .services-card a {
+      background-color: var(--White);
+      text-align: left;
+      padding: 10px;
+      
+    }
+
+    .services-card{
+      margin: 0 20px 0 20px;
+      margin-bottom: 30px;
+      width: 33%;
+      .img-services {
+        background-color: var(--PrimaryLighter);
+        border-radius: 50%;
+        padding: 10px;
+        margin: 10px;
+        width: 40px;
+        height: 40px;
+      }
+      
+      .img-services img {
+        background-color: var(--PrimaryLighter);
+      }
+      
+      .learn-more{
+        background-color: transparent;
+      }
+
+    }
+
+  }
+  
 }
 
-#newsletter {
-  position: relative;
-  background-color: bisque;
-  height: 300px;
-  margin-bottom: 100px;
-}
-
-.footer {
-  position: relative;
-  background-color: cadetblue;
-  height: 300px;
-  margin-bottom: 100px;
-}
