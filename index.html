@@ -5,8 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Circle cloning</title>
+    <link rel="stylesheet"type="text/css"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="shortcut icon"type="image/x-icon"href="./assets/logos/favicon.ico"/>
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/scroll.css">
+    <link rel="stylesheet" href="./css/burger.css">
 </head>
 
 <body>
@@ -16,11 +20,21 @@
                 <img src="./images/logos/circle.svg" alt="logo navigator">
             </a>
             <ul class="header-nav-links">
-                <li class="nav-link nav-link-selected"><a href="./index.html"></a>Home</li>
-                <li class="nav-link"><a href="./index.html#projects"></a>Projects</li>
-                <li class="nav-link"><a href="./index.html#services"></a>Services</li>
+                <li class="nav-link nav-link-selected"><a href="./index.html">Home</a> </li>
+                <li class="nav-link"><a href="./index.html#projects">Projects</a></li>
+                <li class="nav-link"><a href="./index.html#services">Services</a></li>
             </ul>
-            <a class="btn" id="header-nav-btn" href="./html/contact.html">Contact Us</a>
+            <a class="btn" id="header-nav-btn" href="./html/contact.html">Contact us</a>
+            <div class="nav-burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul class="header-nav-links-vertical">
+                <li><a class="nav-link nav-link-selected" href="./index.html">Home</a></li>
+                <li><a class="nav-link" href="./index.html#projects">Projects</a></li>
+                <li><a class="nav-link" href="./index.html#services">Services</a></li>
+            </ul>
         </nav>
     </header>
     <section class="hero">
@@ -113,7 +127,27 @@
         </div>
     </section>
     <section class="testimonial">
-
+        <div class="testimonial-memojis">
+            <img class="testimonial-memoji1"src="./images/testimonial-section/memoji-1.png"alt="Memoji 1"/>
+            <img class="testimonial-memoji2"src="./images/testimonial-section/memoji-2.png"alt="Memoji 2"/>
+            <img class="testimonial-memoji3"src="./images/testimonial-section/memoji-3.png"alt="Memoji 3"/>
+            <img class="testimonial-memoji4"src="./images/testimonial-section/memoji-4.png"alt="Memoji 4"/>
+        </div>
+        <div class="testimonial-text">
+            <h3 class=>Hear what our clients have to say</h3>
+            <p>
+              "Circle helped us through every stage of our startup.
+              <br />
+              We really enjoyed working with you."
+            </p>
+        </div>
+        <div class="testimonial-profile">
+            <img class="testimonial-profile-img"src="./images/testimonial-section/profile.png"alt="Kristin Watson profile image"/>
+            <div class="testimonial-profile-info">
+              <p class="name">Kristin Watson</p>
+              <p class="origin">Booking.com</p>
+            </div>
+        </div>
     </section>
     <section id="services" class="services">
      
@@ -121,10 +155,17 @@
     <section id="newsletter">
 
     </section>
+    <div className="scroll-to-top">
+        <span
+          class="fa fa-arrow-up btn-scroll btn-scroll-position btn-scroll-style"
+        ></span>
+      </div>
     <footer class="footer">
         
     </footer>
     <script src="./js/index.js"></script>
+    <script src="./js/burger.js"></script>
+    <script src="./js/scroll.js"></script>
 </body>
 
 </html>

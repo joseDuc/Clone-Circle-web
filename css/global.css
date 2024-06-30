@@ -66,15 +66,15 @@ a:hover {
 
 .logo {
     width: 60px;
-    
+
     img {
-        width: 100%;
+        width: 60px;
     }
 }
 
 .header-nav {
     margin: 30px auto;
-    width: 85%;
+    width: 90%;
     font-size: 18px;
     display: flex;
     flex-direction: row;
@@ -84,44 +84,62 @@ a:hover {
 
     .btn {
         margin: 10px;
+        margin-right: 100px;
+        width: 120px;
+        max-height: 50px;
     }
+
     .header-nav-links {
         display: flex;
         flex-direction: row;
         list-style: none;
-    
+
         li {
             margin: 20px;
         }
-        
+
     }
+
     .nav-link {
         color: var(--NeutralMedium);
     }
+
     .nav-link:hover {
         color: var(--Primary);
         cursor: pointer;
-        text-decoration:underline;
+        text-decoration: underline;
     }
-    .nav-link-selected {
+}
+
+.header-nav-links-vertical {
+    display: none;
+    list-style-type: none;
+    color: var(--NeutralMedium);
+    font-family: "Roboto";
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 22px;
+    li{
+        margin: 0;
+    }
+}
+
+.header-nav-links {
+    margin-left: 40px;
+}
+.nav-link-selected{
+    a {
         color: var(--Primary);
+        font-weight: bold;
     }
 }
-
-.btn {
-    background-color: var(--Primary);
-    color: var(--White);
-    display: inline;
-    margin: 30px;
-    padding: 15px;
-    width: 100px;
+.logo {
+    margin-left: 90px;
 }
 
-a.btn:hover {
-    color: var(--SecondaryDark);
-    text-decoration: none;
+.nav-link:hover {
+    color: var(--Primary);
 }
-
 
 .recent-projects {
     position: relative;
@@ -129,6 +147,7 @@ a.btn:hover {
     height: 400px;
     visibility: visible;
     margin-bottom: 150px;
+
     h2 {
         text-align: left;
         margin-bottom: 50px;
@@ -171,16 +190,12 @@ a.btn:hover {
                 }
 
                 .learn-more p {
-                    color: val(--Primary);
-                }
-
-                .learn-more p {
+                    color: var(--Primary);
                     padding-bottom: 20px;
                     padding-left: 20px;
 
                 }
             }
-
         }
 
         .project-card,
@@ -188,12 +203,63 @@ a.btn:hover {
         .project-card p,
         .project-card a {
             background-color: var(--White);
-            text-align: left;
             color: var(--Black);
+            text-align: left;
         }
     }
 }
+
 .project-card:hover,
 .services-card:hover {
     box-shadow: 10px 5px 5px var(--NeutralMedium);
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.footer .logo {
+    margin-bottom: 20px;
+}
+
+.footer p {
+    text-align: left;
+}
+
+.address-info p {
+    margin: 30px 0;
+}
+
+.address-info {
+    text-align: left;
+}
+
+.sitemap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.sitemap li {
+    flex: 0 32%;
+    height: 60px;
+    margin-bottom: 2%;
+}
+
+/*standar botom*/
+.btn {
+    background-color: var(--Primary);
+    color: var(--White);
+    display: inline;
+    margin: 30px;
+    padding: 15px;
+    width: 100px;
+}
+
+a.btn:hover {
+    color: var(--SecondaryDark);
+    text-decoration: none;
 }
