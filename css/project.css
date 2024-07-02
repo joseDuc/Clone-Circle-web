@@ -1,29 +1,33 @@
 
+
+h1{
+  font-size: 4em;
+}
 #project{
     .project-image-section {
         width: 100%;
-        margin-top: 4%;
-        margin-bottom: 7%;
+        margin-top: 50px;
+        margin-bottom: 30px;
       }
       .project-image {
-        width: 84%;
-        height: 40vh;
+        width: 90%;
+        height: 70vh;
         object-fit: cover;
         filter: drop-shadow(5px 5px 20px #c414ca74);
       }
       .project-description {
         font-family: Roboto;
         color: var(--NeutralMedium);
-        margin-bottom: 7%;
+        margin-bottom: 30px;
         text-align: left;
         background-color: var(--NeutralLight);
         margin-left: 40px;
         margin-right: 40px;
-        font-size: 11px;
+        font-size: 20px;
       }
       .title {
         text-align: left;
-        font-size: 35px;
+        font-size: 3.5em;
         margin-left: 40px;
         margin-top: 10%;
       }
@@ -36,22 +40,23 @@
       
       .UI-design-title {
         color: var(--NeutralMedium);
-        font-size: 12px;
+        font-size: 20px;
         margin: 0;
       }
       
       .completed-title {
         color: var(--NeutralDark);
-        font-size: 10px;
+        font-size: 20px;
         margin: 0;
+        .completed-title-data {
+          color: var(--NeutralMedium);
+          font-size: 12px;
+          margin-left: 10px;
+          margin-right: 40px;
+        }
       }
       
-      .completed-title-data {
-        color: var(--NeutralMedium);
-        font-size: 10px;
-        margin: 0;
-        margin-right: 40px;
-      }
+      
 }
 
   

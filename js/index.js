@@ -1,13 +1,13 @@
 window.addEventListener("load", async () => {
     try {
+      //peticion a la API
       const response = await fetch(
         "https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects"
       );
       const data = await response.json();
-
-      var articles = data.reverse().slice(0, 3).map(jsonProjectToHtmlArticle);
-
       const container = document.querySelector("div.projects-container");
+       //el contenido viene en orden DESC, con reverse le cambia el orden a ASC
+      const articles = data.reverse().slice(0, 3).map(jsonProjectToHtmlArticle);
       container.innerHTML = "";
       articles.forEach((article) => container.appendChild(article));
     } catch (error) {
@@ -22,7 +22,6 @@ window.addEventListener("load", async () => {
     article.className = "project-card";
     const wrapper = createProjectWrapperAnchor(project);
     article.appendChild(wrapper);
-  
     return article;
   }
   
@@ -39,7 +38,6 @@ window.addEventListener("load", async () => {
   
     const divInnerCard = createProjectInnerCard(project);
     wrapperAnchor.appendChild(divInnerCard);
-  
     return wrapperAnchor;
   }
   
@@ -61,14 +59,14 @@ window.addEventListener("load", async () => {
     learnMoreLink.className = "learn-more";
     const learnMoreLinkP = document.createElement("p");
     learnMoreLinkP.innerHTML = "Learn more";
-    learnMoreLink.setAttribute(
-      "href",
-      `./html/projects.html?id=${project.uuid}`
+    learnMoreLink.href=`./html/projects.html?id=${project.uuid}`;
+/*
+   learnMoreLink.setAttribute(
+      "href",`./html/projects.html?id=${project.uuid}`
     );
-
+*/
     learnMoreLink.appendChild(learnMoreLinkP);
     divInnerCard.appendChild(learnMoreLink);
-  
     return divInnerCard;
   }
   

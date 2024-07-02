@@ -1,0 +1,133 @@
+label {
+    color: var(--NeutralMedium);
+}
+
+input {
+    background: rgba(107, 112, 141, 0.1);
+}
+
+.header-nav-links-vertical{
+    display: none;
+}
+
+.formClass {
+    margin: 80px 170px;
+    text-align: left;;
+}
+
+#email {
+    margin-right: 10px;
+    width: 100%;
+    border: none;
+    background-color: rgba(107, 112, 141, 0.1);
+    height: 60px;
+    margin-block-start: 10px;
+    padding-left: 10px;
+}
+
+#phone {
+    width: 100%;
+    border: none;
+    background-color: rgba(107, 112, 141, 0.1);
+    height: 60px;
+    margin-block-start: 10px;
+    padding-left: 10px;
+}
+
+.emailAndPhone {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+}
+
+.emailAndPhone div {
+    width: 46%;
+    margin-block-end: 20px;
+    margin: 0;
+}
+
+.name {
+    width: 100%;
+    margin-block-end: 20px;
+}
+
+#name {
+    width: 100%;
+    border: none;
+    background-color: rgba(107, 112, 141, 0.1);
+    height: 60px;
+    margin-block-start: 10px;
+    padding-left: 10px;
+}
+
+.message {
+    width: 100%;
+    height: 200px;
+}
+
+#message {
+    padding-top: 20px;
+    width: 100%;
+    border: none;
+    background-color: rgba(107, 112, 141, 0.1);
+    margin-block-start: 10px;
+    padding-left: 10px;
+}
+
+.buttonSubmit {
+    width: 103%;
+    margin-top: 60px;
+}
+
+#submitForm {
+    width: 100%;
+    height: 60px;
+    border: none;
+    background-color: var(--Primary);
+    color: var(--White);
+    font-weight: normal;
+}
+
+#submitForm:hover {
+    cursor: pointer;
+    color: var(--SecondaryDark);
+    text-decoration: none;
+}
+
+.errorForm {
+    color: red;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#errorSubmit {
+    justify-items: center;
+    font-size: 30px;
+    border-radius: 10px;
+    height: 40px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.marcaError {
+    border-color: red;
+    border-style: solid;
+    border-width: 2px;
+}
+
+
+@media (max-width: 800px){
+    .emailAndPhone{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .email{
+            width: 100%;
+        }
+        .phone{
+            width: 100%;
+        }
+    }
+}

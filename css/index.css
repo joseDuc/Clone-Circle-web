@@ -1,10 +1,9 @@
+
 .hero {
   margin: 30px auto;
-  max-width: 95%;
   width: 95%;
-  height: 700px;
+ 
   display: flex;
-  flex-direction: row;
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-between;
@@ -12,12 +11,12 @@
   .hero-content {
     text-align: left;
     width: 50%;
-    height: 60%;
+
 
     .hero-content-links {
       margin: 0;
       width: 300px;
-      height: 40px;
+    
       display: flex;
       flex-direction: row;
 
@@ -71,18 +70,18 @@
   width: 85%;
   position: relative;
   display: flex;
-  flex-direction: row;
   flex-flow: row wrap;
   align-items: center;
-  justify-content: space-between;
+
   gap: 60px;
   margin-bottom: 150px;
 
   .img-client {
     width: 100px;
-    margin: 0 auto;
+
+    /*pone en gris la imagen (le quita el color)*/
     filter: grayscale(1);
-    transition: width 1s, height 1s;
+    transition: width 0.5s, height 0.5s;
   }
 
   .img-client:hover {
@@ -95,17 +94,17 @@
 .testimonial {
   position: relative;
   margin: 0px;
-  height: 350px;
+  width: 100vw;
   margin-bottom: 200px;
 
   .testimonial-memojis {
     position: absolute;
     background-color: var(--NeutralDark);
-    width: 1500px;
+    width: 100%;
     height: 450px;
     padding: 0;
     background-image: url(../images/testimonial-section/orbit.png);
-    background-size: 20%;
+    background-size: 100%;
 
     img {
       width: 80px;
@@ -197,7 +196,7 @@
 #services {
   position: relative;
   width: 85%;
-  height: 400px;
+
   margin-bottom: 150px;
 
   h2 {
@@ -208,10 +207,8 @@
 
   .services-container{
     display: flex;
-    flex-direction: row wrap;
-    align-content: flex-start;
-    align-items: left;
-
+    flex-flow: row wrap;
+    
     .services-card,
     .services-card h4,
     .services-card p,
@@ -225,7 +222,9 @@
     .services-card{
       margin: 0 20px 0 20px;
       margin-bottom: 30px;
-      width: 33%;
+      
+      min-width: 150px;
+      max-width: 250px;
       .img-services {
         background-color: var(--PrimaryLighter);
         border-radius: 50%;
@@ -249,3 +248,16 @@
   
 }
 
+@media(max-width:600px){
+  .hero{
+      flex-direction: column;
+      .hero-image{
+        .img-card-top{
+          visibility: hidden;
+        }
+        .img-card-bottom{
+          visibility: hidden;
+        }
+      }
+  }
+}

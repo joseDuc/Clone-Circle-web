@@ -16,6 +16,14 @@
     --Background: #f2f4fc;
 }
 
+/*
+*, html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*/
+
 html,
 body {
     text-align: center;
@@ -93,7 +101,7 @@ a:hover {
         display: flex;
         flex-direction: row;
         list-style: none;
-
+  
         li {
             margin: 20px;
         }
@@ -111,8 +119,8 @@ a:hover {
     }
 }
 
+
 .header-nav-links-vertical {
-    display: none;
     list-style-type: none;
     color: var(--NeutralMedium);
     font-family: "Roboto";
@@ -149,9 +157,8 @@ a:hover {
 }
 
 .recent-projects {
-    position: relative;
+
     width: 85%;
-    height: 400px;
     visibility: visible;
     margin-bottom: 150px;
 
@@ -230,13 +237,10 @@ a:hover {
 }
 
 #newsletter {
-    width: 1200px;
-    height: 400px;
     margin-bottom: 150px;
 
     h2 {
         padding: 80px 0 30px;
-
         font-size: 2.5em;
         font-weight: bold;
     }
@@ -248,12 +252,12 @@ a:hover {
     form {
         width: 50%;
         display: flex;
-        flex-direction: row;
+        flex-wrap: row wrap;
 
         #email {
             background-image: url("../images/newsletter/icon/mail.svg");
             background-repeat: no-repeat;
-            background-position: 5%;
+            background-position: 5%;/*posicion de la imagen 'sobre'*/
             border: 1px solid var(--White);
             text-align: center;
             width: 90%;
@@ -264,7 +268,6 @@ a:hover {
             border: none;
             padding: 20px;
             font-size: 18px;
-            display: block;
             margin: 20px auto;
         }
 
@@ -276,15 +279,6 @@ a:hover {
             cursor: pointer;
             color: var(--SecondaryDark);
         }
-    }
-
-    input[type="button"] {
-        background-color: var(--Primary);
-        color: var(--White);
-    }
-
-    .newsletter input[type="email"]:hover {
-        border: 1px solid var(--Black);
     }
 
 }
@@ -311,30 +305,23 @@ a:hover {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        vertical-align:middle;
         list-style: none;
 
-        vertical-align:bottom;
         li {
             flex: 0 32%;
             height: 60px;
             margin-bottom: 2%;
+        }
+        li:hover{
+            text-decoration: underline;
         }
     }
 }
 
 
 
-
-
-
-
-.sitemap li {
-    flex: 0 32%;
-    height: 60px;
-    margin-bottom: 2%;
-}
-
-/*standar botom*/
+/*standar boton*/
 .btn {
     background-color: var(--Primary);
     color: var(--White);
@@ -342,9 +329,20 @@ a:hover {
     margin: 30px;
     padding: 15px;
     width: 100px;
+    min-width: 100px; 
 }
 
 a.btn:hover {
     color: var(--SecondaryDark);
     text-decoration: none;
 }
+
+@media(max-width:600px){
+    #newsletter{
+        form{
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+

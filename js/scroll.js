@@ -1,4 +1,4 @@
-// This component will create the behaviour for a button that let us go to the top of the page.
+
 const scrollUpBtn = document.querySelector(".btn-scroll");
 
 const btnVisibility = () => {
