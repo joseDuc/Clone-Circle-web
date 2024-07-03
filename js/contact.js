@@ -5,8 +5,8 @@ var okMessage = false;
 
 function validateName(e) {
   //let nameUser = document.getElementById("name");
-  let nameUser =e.currentTarget;
-  okName=false
+  let nameUser = e.currentTarget;
+  okName = false
   if (!nameUser.value) {
     document.getElementById("errorName").hidden = false;
     nameUser.style.borderColor = "red";
@@ -20,16 +20,16 @@ function validateName(e) {
 }
 
 function validateEmail(e) {
-//let emailUser = document.getElementById("email");
-  let emailUser =e.currentTarget;
-  let errMail= document.getElementById("errorEmail")
+  //let emailUser = document.getElementById("email");
+  let emailUser = e.currentTarget;
+  let errMail = document.getElementById("errorEmail")
 
-  okEmail=false;
+  okEmail = false;
   if (!emailUser.value) {
     errMail.hidden = false;
     emailUser.style.borderColor = "red";
     emailUser.style.borderStyle = "solid";
-  }else{
+  } else {
     errMail.hidden = true;
     emailUser.style.borderStyle = "none";
     okEmail = emailUser.value;
@@ -53,30 +53,30 @@ function validateEmail(e) {
     );
     */
   let isValid = emailUser.value;
- 
+
   if (!isValid) {
     errMail.hidden = false;
     emailUser.style.borderColor = "red";
     emailUser.style.borderStyle = "solid";
   } else {
-    if(!isValid.includes('@')){
+    if (!isValid.includes('@')) {
       errMail.hidden = false
       emailUser.style.borderColor = "red";
       emailUser.style.borderStyle = "solid";
-    }else if(!isValid.includes('.')){
-        errMail.hidden = false;
-        emailUser.style.borderColor = "red";
-        emailUser.style.borderStyle = "solid";
-    }else
+    } else if (!isValid.includes('.')) {
+      errMail.hidden = false;
+      emailUser.style.borderColor = "red";
+      emailUser.style.borderStyle = "solid";
+    } else
       okEmail = emailUser.value;
-    }
-    validateValues();
+  }
+  validateValues();
 }
 
 function validatePhone(e) {
   //let phoneNumber = document.getElementById("phone");
-  let phoneNumber=e.currentTarget;
-  okPhone=false;
+  let phoneNumber = e.currentTarget;
+  okPhone = false;
   if (!phoneNumber.value) {
     document.getElementById("errorPhone").hidden = false;
     phoneNumber.style.borderColor = "red";
@@ -91,8 +91,8 @@ function validatePhone(e) {
 
 function validateMessage(e) {
   //let messageUser = document.getElementById("message");
-  let messageUser =e.currentTarget;
-  okMessage=false;
+  let messageUser = e.currentTarget;
+  okMessage = false;
   if (messageUser.value.length < 6) {
     document.getElementById("errorMessageUser").hidden = false;
     messageUser.style.borderColor = "red";
@@ -122,23 +122,23 @@ function sendForm() {
   }
 }
 
-let nameForm =document.querySelector("#name");
+let nameForm = document.querySelector("#name");
 nameForm.addEventListener('blur', (e) => {
   return validateName(e);
 });
-let emailForm =document.querySelector("#email");
+let emailForm = document.querySelector("#email");
 emailForm.addEventListener('blur', (e) => {
   return validateEmail(e);
 });
-let phoneForm =document.querySelector("#phone");
+let phoneForm = document.querySelector("#phone");
 phoneForm.addEventListener('blur', (e) => {
   return validatePhone(e);
 });
-let messageForm =document.querySelector("#message");
+let messageForm = document.querySelector("#message");
 messageForm.addEventListener('blur', (e) => {
   return validateMessage(e);
 });
-let submitForm =document.querySelector("#submitForm");
+let submitForm = document.querySelector("#submitForm");
 submitForm.addEventListener('click', (e) => {
   return sendForm(e);
 });

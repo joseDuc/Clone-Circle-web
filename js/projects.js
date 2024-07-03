@@ -12,9 +12,10 @@ window.addEventListener("load", async () => {
 
         const mainProject = data[mainProjectIndex];
         addMainProject(mainProject);
-        //elimina el proyecto principal del resto de la lista
+
+        //elimina el proyecto principal de la lista
         data.splice(mainProjectIndex, 1);
-        //aqui coge los 3 primeros elementos, porque no se sabe si han venido más de 4 (se podria saber)
+
         addOtherProjects(data.slice(0, 3).reverse());
     } catch (error) {
         console.log(error);
@@ -107,7 +108,7 @@ function jsonProjectToOtherHtmlArticle(project) {
     if (!project) {
         return;
     }
-     const projectHTML = `
+    const projectHTML = `
           <article class="project-card">
               <a class="project-wrapper" href="../html/projects.html?id=${project.uuid}">
                   <img class="img-project" src="${project.image}" alt="${project.name} image" />

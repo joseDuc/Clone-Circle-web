@@ -11,6 +11,7 @@ input {
 .formClass {
     margin: 80px 170px;
     text-align: left;
+
     #email {
         margin-right: 10px;
         width: 100%;
@@ -20,6 +21,7 @@ input {
         margin-block-start: 10px;
         padding-left: 10px;
     }
+
     #phone {
         width: 100%;
         border: none;
@@ -28,7 +30,7 @@ input {
         margin-block-start: 10px;
         padding-left: 10px;
     }
-    
+
 }
 
 .emailAndPhone {
@@ -114,19 +116,22 @@ input {
     border-style: solid;
     border-width: 2px;
 }
-.header-nav-links-vertical{
+
+.header-nav-links-vertical {
     display: none;
 }
 
-@media (max-width: 800px){
-    .emailAndPhone{
+@media (max-width: 800px) {
+    .emailAndPhone {
         display: flex;
         flex-direction: column;
         width: 100%;
-        .email{
+
+        .email {
             width: 100%;
         }
-        .phone{
+
+        .phone {
             width: 100%;
         }
     }

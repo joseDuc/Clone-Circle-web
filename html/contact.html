@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,10 @@
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/contact.css">
     <link rel="shortcut icon" type="image/x-icon" href="../images/logos/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
     <header>
         <nav class="header-nav">
@@ -33,40 +36,40 @@
             </ul>
         </nav>
     </header>
-    <form id ="form-container" class="formClass" action="">
+    <form id="form-container" class="formClass" action="">
         <h1>Contact Us</h1>
         <div class="name">
-            <label for="name" >Full name</label><br>
+            <label for="name">Full name</label><br>
             <input id="name" name="name" type="text" class="marcaError" placeholder="Enter your full name" required>
             <p id="errorName" hidden class="errorForm">Enter your name.</p>
         </div>
         <div class="emailAndPhone">
             <div class="email">
-                <label for="email" >Email</label><br>
+                <label for="email">Email</label><br>
                 <input id="email" name="email" type="email" placeholder="Enter your email" required>
                 <p id="errorEmail" hidden class="errorForm">Enter your email.</p>
             </div>
             <div class="phone">
                 <label for="phone">Phone</label><br>
-                <input id="phone" type="text" name="phone"  placeholder="Enter your phone number" required>
+                <input id="phone" type="text" name="phone" placeholder="Enter your phone number" required>
                 <p id="errorPhone" hidden class="errorForm">Enter you phone number</p>
             </div>
         </div>
         <div class="message">
             <label for="message">Message</label><br>
-            <textarea id="message" name="message"  cols="30" rows="10"
-                placeholder="Write your message here..." required>
+            <textarea id="message" name="message" cols="30" rows="10" placeholder="Write your message here..." required>
             </textarea>
             <p id="errorMessageUser" hidden class="errorForm">The message must be at least 5 characters</p>
         </div>
-        <div class="buttonSubmit" >
+        <div class="buttonSubmit">
             <button id="submitForm" type="button">Submit</button>
             <p class="errorForm" id="errorSubmit" hidden>Please check the required fields</p>
         </div>
     </form>
 
-    
+
     <script src="../js/contact.js"></script>
     <script src="../js/burger.js"></script>
 </body>
+
 </html>

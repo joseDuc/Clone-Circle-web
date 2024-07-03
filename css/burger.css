@@ -17,27 +17,7 @@
   z-index: 200;
 }
 
-.header-nav-links-vertical {
-  position: absolute;
-  top: -50%;
-  right: 0;
-  width: 200px;
-  height: 50%;
-  gap: 20px;
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  flex-direction: column;
-  align-items: center;
-  background-color: var( --NeutralMedium);
-  opacity: 0.8;
-  z-index: 100;
 
-    li:first-child {
-      margin-top: 50%;
-    }
-}
 
 .nav-active {
   right: 0;
@@ -53,5 +33,3 @@
   width: 100px;
   padding: 5px;
 }
-
-
