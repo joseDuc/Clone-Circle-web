@@ -137,13 +137,9 @@ a:hover {
     background-color: var(--NeutralMedium);
     opacity: 0.8;
     z-index: 100;
-
+    transition: all 0.3s ease;
     li:first-child {
         margin-top: 60%;
-
-        a {
-            text-align: center;
-        }
     }
 }
 

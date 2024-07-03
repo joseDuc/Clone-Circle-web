@@ -76,7 +76,7 @@
   margin-bottom: 150px;
 
   .img-client {
-    width: 100px;
+    width: 100%;
 
     /*pone en gris la imagen (le quita el color)*/
     filter: grayscale(1);
@@ -85,7 +85,7 @@
 
   .img-client:hover {
     filter: grayscale(0);
-    width: 150px;
+    width: 150%;
     transition: width 0.5s, height 0.5s;
   }
 }
