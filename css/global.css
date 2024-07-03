@@ -101,7 +101,7 @@ a:hover {
         display: flex;
         flex-direction: row;
         list-style: none;
-  
+
         li {
             margin: 20px;
         }
@@ -109,6 +109,8 @@ a:hover {
     }
 
     .nav-link {
+        text-decoration: none;
+        margin-right: 20px;
         color: var(--NeutralMedium);
     }
 
@@ -123,7 +125,6 @@ a:hover {
 .header-nav-links-vertical {
     list-style-type: none;
     color: var(--NeutralMedium);
-    font-family: "Roboto";
     font-size: 17px;
     font-weight: 500;
     line-height: 22px;
@@ -257,7 +258,8 @@ a:hover {
         #email {
             background-image: url("../images/newsletter/icon/mail.svg");
             background-repeat: no-repeat;
-            background-position: 5%;/*posicion de la imagen 'sobre'*/
+            background-position: 5%;
+            /*posicion de la imagen 'sobre'*/
             border: 1px solid var(--White);
             text-align: center;
             width: 90%;
@@ -283,42 +285,48 @@ a:hover {
 
 }
 
+
 .footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 100%;
     margin-bottom: 150px;
+    
     .logo {
         margin-bottom: 20px;
     }
+    
     p {
         text-align: left;
     }
+    
     .address-info {
         text-align: left;
+        
         p {
             margin: 30px 0;
         }
     }
+    
     .sitemap {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        vertical-align:middle;
+        vertical-align: middle;
         list-style: none;
-
+        
         li {
             flex: 0 32%;
             height: 60px;
             margin-bottom: 2%;
         }
-        li:hover{
+        
+        li:hover {
             text-decoration: underline;
         }
     }
 }
-
 
 
 /*standar boton*/
@@ -329,7 +337,7 @@ a:hover {
     margin: 30px;
     padding: 15px;
     width: 100px;
-    min-width: 100px; 
+    min-width: 100px;
 }
 
 a.btn:hover {
@@ -337,12 +345,20 @@ a.btn:hover {
     text-decoration: none;
 }
 
-@media(max-width:600px){
-    #newsletter{
-        form{
+@media(max-width:600px) {
+    #newsletter {
+        form {
             flex-direction: column;
             align-items: center;
         }
     }
+    .header-nav{
+        .nav-burger{
+            display: flex;
+            flex-direction: column;
+        }
+        .header-nav-links {
+            display: none;
+        }
+    }
 }
-

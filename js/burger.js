@@ -1,3 +1,4 @@
+/*
 document.querySelector(".nav-burger").addEventListener("click", function () {
   document.querySelector(".header-nav-links-vertical").classList.toggle("nav-active");
   document.querySelector(".nav-burger").classList.toggle("grey-background");
@@ -7,4 +8,11 @@ document.querySelector(".nav-burger").addEventListener("click", function () {
   });
 
   document.body.classList.toggle("no-scroll");
+});
+
+*/
+
+
+document.querySelector(".nav-burger").addEventListener("click", function () {
+  document.querySelector(".header-nav-links-vertical").classList.toggle("nav-active");
 });

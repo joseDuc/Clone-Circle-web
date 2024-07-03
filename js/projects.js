@@ -12,10 +12,10 @@ window.addEventListener("load", async () => {
 
         const mainProject = data[mainProjectIndex];
         addMainProject(mainProject);
-
+        //elimina el proyecto principal del resto de la lista
         data.splice(mainProjectIndex, 1);
-        const otherProjects = data.slice(0, 3).reverse();
-        addOtherProjects(otherProjects);
+        //aqui coge los 3 primeros elementos, porque no se sabe si han venido más de 4 (se podria saber)
+        addOtherProjects(data.slice(0, 3).reverse());
     } catch (error) {
         console.log(error);
     }
@@ -96,12 +96,10 @@ function addMainProject(project) {
 
 function addOtherProjects(projects) {
     let articlesHTML = "";
-
+    const container = document.querySelector(".projects-container");
     projects.forEach((project) => {
         articlesHTML += jsonProjectToOtherHtmlArticle(project);
     });
-
-    const container = document.querySelector(".projects-container");
     container.innerHTML = articlesHTML;
 }
 

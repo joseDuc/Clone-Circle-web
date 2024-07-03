@@ -252,12 +252,9 @@
   .hero{
       flex-direction: column;
       .hero-image{
-        .img-card-top{
-          visibility: hidden;
-        }
-        .img-card-bottom{
+        .img-card{
           visibility: hidden;
         }
       }
-  }
+    }
 }

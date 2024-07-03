@@ -23,6 +23,7 @@ function validateEmail(e) {
 //let emailUser = document.getElementById("email");
   let emailUser =e.currentTarget;
   let errMail= document.getElementById("errorEmail")
+
   okEmail=false;
   if (!emailUser.value) {
     errMail.hidden = false;
@@ -52,14 +53,14 @@ function validateEmail(e) {
     );
     */
   let isValid = emailUser.value;
-
+ 
   if (!isValid) {
     errMail.hidden = false;
     emailUser.style.borderColor = "red";
     emailUser.style.borderStyle = "solid";
   } else {
     if(!isValid.includes('@')){
-      errMail.hidden = false;
+      errMail.hidden = false
       emailUser.style.borderColor = "red";
       emailUser.style.borderStyle = "solid";
     }else if(!isValid.includes('.')){

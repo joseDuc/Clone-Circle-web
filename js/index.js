@@ -7,7 +7,12 @@ window.addEventListener("load", async () => {
       const data = await response.json();
       const container = document.querySelector("div.projects-container");
        //el contenido viene en orden DESC, con reverse le cambia el orden a ASC
-      const articles = data.reverse().slice(0, 3).map(jsonProjectToHtmlArticle);
+      //const articles = data.reverse().slice(0, 3).map(jsonProjectToHtmlArticle);
+      /*esta es la versión que conozco para mapear elementos de un array
+      aunque la anterior (comentada) parece muy avanzada e interesante*/
+      const articles = data.reverse().slice(0, 3).map(project=>{
+        return jsonProjectToHtmlArticle(project);
+      });
       container.innerHTML = "";
       articles.forEach((article) => container.appendChild(article));
     } catch (error) {

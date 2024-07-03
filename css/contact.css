@@ -6,32 +6,29 @@ input {
     background: rgba(107, 112, 141, 0.1);
 }
 
-.header-nav-links-vertical{
-    display: none;
-}
+
 
 .formClass {
     margin: 80px 170px;
-    text-align: left;;
-}
-
-#email {
-    margin-right: 10px;
-    width: 100%;
-    border: none;
-    background-color: rgba(107, 112, 141, 0.1);
-    height: 60px;
-    margin-block-start: 10px;
-    padding-left: 10px;
-}
-
-#phone {
-    width: 100%;
-    border: none;
-    background-color: rgba(107, 112, 141, 0.1);
-    height: 60px;
-    margin-block-start: 10px;
-    padding-left: 10px;
+    text-align: left;
+    #email {
+        margin-right: 10px;
+        width: 100%;
+        border: none;
+        background-color: rgba(107, 112, 141, 0.1);
+        height: 60px;
+        margin-block-start: 10px;
+        padding-left: 10px;
+    }
+    #phone {
+        width: 100%;
+        border: none;
+        background-color: rgba(107, 112, 141, 0.1);
+        height: 60px;
+        margin-block-start: 10px;
+        padding-left: 10px;
+    }
+    
 }
 
 .emailAndPhone {
@@ -46,6 +43,7 @@ input {
     width: 46%;
     margin-block-end: 20px;
     margin: 0;
+    margin-bottom: 20px;
 }
 
 .name {
@@ -116,7 +114,9 @@ input {
     border-style: solid;
     border-width: 2px;
 }
-
+.header-nav-links-vertical{
+    display: none;
+}
 
 @media (max-width: 800px){
     .emailAndPhone{
