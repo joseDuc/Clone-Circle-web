@@ -1,5 +1,6 @@
 .scroll-to-top {
     position: relative;
+
   }
   
   .btn-scroll-position {
@@ -20,6 +21,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    visibility: hidden;
   }
   @keyframes movebtn {
     0% {
