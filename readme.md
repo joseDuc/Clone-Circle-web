@@ -55,6 +55,11 @@
 
 
 
+[Enlace para visualizar el site en Netlify](https://circle-cloning.netlify.app) </br>
+[Enlace para visualizar la presentación del site](https://docs.google.com/presentation/d/1-dgHUdhmrdMBGAB0TfeG474plySXsS_I6_eHxhvYsCc/edit#slide=id.g2e9e78cdbe1_7_56)
+
+
+
 
 
 

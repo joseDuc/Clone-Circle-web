@@ -14,5 +14,6 @@ document.querySelector(".nav-burger").addEventListener("click", function () {
 
 
 document.querySelector(".nav-burger").addEventListener("click", function () {
+  //agrega o elimina la clase pasada por el parámetro
   document.querySelector(".header-nav-links-vertical").classList.toggle("nav-active");
 });

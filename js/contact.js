@@ -53,17 +53,25 @@ function validateEmail(e) {
     );
     */
   let isValid = emailUser.value;
-
   if (!isValid) {
     errMail.hidden = false;
     emailUser.style.borderColor = "red";
     emailUser.style.borderStyle = "solid";
   } else {
+    
     if (!isValid.includes('@')) {
       errMail.hidden = false
       emailUser.style.borderColor = "red";
       emailUser.style.borderStyle = "solid";
+    } else if (isValid.indexOf('@') < 3) {
+      errMail.hidden = false;
+      emailUser.style.borderColor = "red";
+      emailUser.style.borderStyle = "solid";
     } else if (!isValid.includes('.')) {
+      errMail.hidden = false;
+      emailUser.style.borderColor = "red";
+      emailUser.style.borderStyle = "solid";
+    } else if (isValid.length < isValid.lastIndexOf('.') + 3) {
       errMail.hidden = false;
       emailUser.style.borderColor = "red";
       emailUser.style.borderStyle = "solid";
@@ -92,8 +100,10 @@ function validatePhone(e) {
 function validateMessage(e) {
   //let messageUser = document.getElementById("message");
   let messageUser = e.currentTarget;
+  let s=messageUser.value.trim();
   okMessage = false;
-  if (messageUser.value.length < 6) {
+
+  if (s.length < 15) {
     document.getElementById("errorMessageUser").hidden = false;
     messageUser.style.borderColor = "red";
     messageUser.style.borderStyle = "solid";
@@ -108,37 +118,46 @@ function validateMessage(e) {
 function validateValues() {
   if (okName && okEmail && okPhone && okMessage) {
     document.getElementById("errorSubmit").hidden = true;
+    return true;
   }
+  return false;
 }
 
 function sendForm() {
-  let incompleteForm = document.getElementById("errorSubmit");
-  if (okName && okEmail && okPhone && okMessage) {
-    incompleteForm.hidden = true;
+  let errorForm = document.getElementById("errorSubmit");
+  if (validateValues()){
+    errorForm.hidden = true;
     console.log(okName, okEmail, okPhone, okMessage);
-  } else {
-    incompleteForm.hidden = false;
-    incompleteForm.style.borderColor = "red";
+  }else{
+    errorForm.hidden = false;
+    errorForm.style.borderColor = "red";
   }
+  //if (okName && okEmail && okPhone && okMessage) {
+  //  errorForm.hidden = true;
+  //  console.log(okName, okEmail, okPhone, okMessage);
+  //} else {
+  //  errorForm.hidden = false;
+  //  errorForm.style.borderColor = "red";
+ // }
 }
 
-let nameForm = document.querySelector("#name");
-nameForm.addEventListener('blur', (e) => {
+
+document.querySelector("#name").addEventListener('blur', (e) => {
   return validateName(e);
 });
-let emailForm = document.querySelector("#email");
-emailForm.addEventListener('blur', (e) => {
+
+document.querySelector("#email").addEventListener('blur', (e) => {
   return validateEmail(e);
 });
-let phoneForm = document.querySelector("#phone");
-phoneForm.addEventListener('blur', (e) => {
+
+document.querySelector("#phone").addEventListener('blur', (e) => {
   return validatePhone(e);
 });
-let messageForm = document.querySelector("#message");
-messageForm.addEventListener('blur', (e) => {
+
+document.querySelector("#message").addEventListener('blur', (e) => {
   return validateMessage(e);
 });
-let submitForm = document.querySelector("#submitForm");
-submitForm.addEventListener('click', (e) => {
+
+document.querySelector("#submitForm").addEventListener('click', (e) => {
   return sendForm(e);
 });

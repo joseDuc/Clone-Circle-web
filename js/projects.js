@@ -13,9 +13,9 @@ window.addEventListener("load", async () => {
         const mainProject = data[mainProjectIndex];
         addMainProject(mainProject);
 
-        //elimina el proyecto principal de la lista
+        //elimina el proyecto principal (mainProjectIndex) de la lista
         data.splice(mainProjectIndex, 1);
-
+        //le da la vuelta a la lista argumento porque viene en orden DESC
         addOtherProjects(data.slice(0, 3).reverse());
     } catch (error) {
         console.log(error);
@@ -23,6 +23,7 @@ window.addEventListener("load", async () => {
 });
 
 function getQuerystringId() {
+    //un método que he de aprender para encontrar cualquier parámetro del querystring en cualquier futura URL
     const params = new Proxy(new URLSearchParams(window.location.search), {
         get: (searchParams, prop) => searchParams.get(prop)
     });

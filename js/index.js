@@ -1,24 +1,51 @@
+
+
+
+
+
+//window.addEventListener("load", async () => {
+//  try {
+ //   //peticion a la API
+   //  const response = await fetch(
+    //   "https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects"
+     //);
+     //const data = await response.json();
+     //const container = document.querySelector("div.projects-container");
+     ////el contenido viene en orden DESC, con reverse le cambia el orden a ASC
+     ////const articles = data.reverse().slice(0, 3).map(jsonProjectToHtmlArticle);
+     ///*esta es la versión que conozco para mapear elementos de un array
+     //aunque la anterior (comentada) parece muy avanzada e interesante*/
+     //const articles = data.reverse().slice(0, 3).map(project => {
+      // return jsonProjectToHtmlArticle(project);
+     //});
+     //container.innerHTML = "";
+     //articles.forEach((article) => container.appendChild(article));
+   //} catch (error) {
+     //console.log(error);
+   //} finally {
+     //document.querySelector("section.recent-projects").removeAttribute("hidden");
+   //}
+ //});
+
+
+
 window.addEventListener("load", async () => {
   try {
-    //peticion a la API
-    const response = await fetch(
-      "https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects"
-    );
+    const response = await fetch("https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects");
     const data = await response.json();
-    const container = document.querySelector("div.projects-container");
-    //el contenido viene en orden DESC, con reverse le cambia el orden a ASC
-    //const articles = data.reverse().slice(0, 3).map(jsonProjectToHtmlArticle);
-    /*esta es la versión que conozco para mapear elementos de un array
-    aunque la anterior (comentada) parece muy avanzada e interesante*/
+    const container = document.querySelector(".projects-container");
     const articles = data.reverse().slice(0, 3).map(project => {
       return jsonProjectToHtmlArticle(project);
     });
-    container.innerHTML = "";
-    articles.forEach((article) => container.appendChild(article));
-  } catch (error) {
+    //vacia el a container de cualquier contenido existente
+    container.innerHTML="";
+    articles.forEach(article=>{container.appendChild(article)});
+  
+  }catch(error){
     console.log(error);
-  } finally {
-    document.querySelector("section.recent-projects").removeAttribute("hidden");
+  }finally{
+    //hace visible la sección invisibilizada en el html
+    document.querySelector(".recent-projects").removeAttribute("hidden");
   }
 });
 
@@ -37,8 +64,10 @@ function createProjectWrapperAnchor(project) {
 
   const imgElement = document.createElement("img");
   imgElement.className = "img-project";
-  imgElement.setAttribute("src", project.image);
-  imgElement.setAttribute("alt", project.name);
+  imgElement.src= project.image;
+  imgElement.alt= project.name;
+  //imgElement.setAttribute("src", project.image);
+  //imgElement.setAttribute("alt", project.name);
   wrapperAnchor.appendChild(imgElement);
 
   const divInnerCard = createProjectInnerCard(project);
@@ -62,15 +91,16 @@ function createProjectInnerCard(project) {
 
   const learnMoreLink = document.createElement("a");
   learnMoreLink.className = "learn-more";
+  learnMoreLink.href = `./html/projects.html?id=${project.uuid}`;
   const learnMoreLinkP = document.createElement("p");
   learnMoreLinkP.innerHTML = "Learn more";
-  learnMoreLink.href = `./html/projects.html?id=${project.uuid}`;
+  learnMoreLink.appendChild(learnMoreLinkP);
   /*
      learnMoreLink.setAttribute(
         "href",`./html/projects.html?id=${project.uuid}`
       );
   */
-  learnMoreLink.appendChild(learnMoreLinkP);
+
   divInnerCard.appendChild(learnMoreLink);
   return divInnerCard;
 }
