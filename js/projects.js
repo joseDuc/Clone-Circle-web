@@ -60,7 +60,7 @@ function addMainProject(project) {
     divSubTitle.append(spanDescription, spanCompleted);
 
     divImage.className = "project-image-section";
-    img.className = "proyect-image"
+    img.className = "project-image"
     img.src = project.image;
     img.alt = project.name;
     divImage.appendChild(img);
