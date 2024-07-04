@@ -3,10 +3,6 @@ h1 {
 }
 
 #project {
-  
-
-  
-
   .project-description {
     font-family: Roboto;
     color: var(--NeutralMedium);
@@ -63,7 +59,6 @@ h1 {
   #project{
     .project-image-section{
       .project-image{
-        background-color:blanchedalmond;
         width:90%;
       }
     }
