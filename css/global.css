@@ -127,12 +127,12 @@ a:hover {
     right: 0;
     width: 200px;
     height: 50%;
-    gap: 20px;
-    display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
     flex-direction: column;
+    gap: 20px;
     align-items: center;
     background-color: var(--NeutralMedium);
     opacity: 0.8;

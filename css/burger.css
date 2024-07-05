@@ -1,9 +1,6 @@
 .nav-burger {
   display: none;
   width: 30px;
-  cursor: pointer;
-  z-index: 200;
-
   .line {
     width: 25px;
     height: 3px;
@@ -16,8 +13,6 @@
   cursor: pointer;
   z-index: 200;
 }
-
-
 
 .nav-active {
   right: 0;

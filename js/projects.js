@@ -1,3 +1,6 @@
+
+
+/*
 window.addEventListener("load", async () => {
     try {
         const response = await fetch(
@@ -19,6 +22,29 @@ window.addEventListener("load", async () => {
         addOtherProjects(data.slice(0, 3).reverse());
     } catch (error) {
         console.log(error);
+    }
+});
+*/
+
+window.addEventListener("load", async () => {
+    try {
+        const response = await fetch("https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects");
+        const data = await response.json();
+        const mainId = getQuerystringId();
+        const mainIdx = data.findIndex(
+            (project) => project.uuid == mainId
+        );
+        const main = data[mainIdx];
+        addMainProject(main);
+
+        data.splice(mainIdx, 1);
+       
+        addOtherProjects(data.slice(0,3).reverse());
+
+    } catch (error) {
+        console.log(error);
+    } finally {
+
     }
 });
 
@@ -96,6 +122,7 @@ function addMainProject(project) {
 
 }
 
+/*
 function addOtherProjects(projects) {
     let articlesHTML = "";
     const container = document.querySelector(".projects-container");
@@ -104,6 +131,7 @@ function addOtherProjects(projects) {
     });
     container.innerHTML = articlesHTML;
 }
+
 
 function jsonProjectToOtherHtmlArticle(project) {
     if (!project) {
@@ -123,3 +151,60 @@ function jsonProjectToOtherHtmlArticle(project) {
       `;
     return projectHTML;
 }
+   */
+
+function addOtherProjects(projects){
+    let container=document.querySelector(".projects-container");
+    container.innerHTML="";
+    projects.forEach((project)=>{
+        container.appendChild(jsonProjectToHtmlArticle(project));
+    });
+}
+    
+   
+function jsonProjectToHtmlArticle(project) {
+    const article = document.createElement("article");
+    article.className = "project-card";
+    const wrapper = createProjectWrapperAnchor(project);
+    article.appendChild(wrapper);
+    return article;
+    
+  }
+    
+   
+function createProjectWrapperAnchor(project){
+    const anchorWrapper =document.createElement('a');
+    anchorWrapper.className="project-wrapper";
+    anchorWrapper.href=`../html/projects.html?id=${project.uuid}`;
+    const img=document.createElement("img");
+    img.className="img-project";
+    img.src=project.image;
+    img.alt=project.name;
+    anchorWrapper.appendChild(img);
+    anchorWrapper.appendChild(createProjectInnerCard(project));
+    return anchorWrapper;
+    }
+
+    
+function createProjectInnerCard(project){
+    const div=document.createElement("div");
+    div.className="project-inner-card";
+    const h4=document.createElement("h4");
+    h4.className="project-title";
+    h4.innerHTML=project.name;
+    div.appendChild(h4);
+    const p=document.createElement("p");
+    p.className="project-description";
+    p.innerHTML=project.description;
+    div.appendChild(p);
+    const a = document.createElement("a");
+    a.className="learn-more";
+    a.href=`../html/projects.html?id=${project.uuid}`;
+    const pLearn=document.createElement("p");
+    p.innerHTML="Learn more";
+    a.appendChild(p);
+    div.appendChild(a);
+    return div;
+  }
+    
+    

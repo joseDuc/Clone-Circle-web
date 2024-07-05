@@ -1,18 +1,14 @@
-.scroll-to-top {
-  position: relative;
 
-}
 
 .btn-scroll-position {
   position: fixed;
   bottom: 40px;
   right: 25px;
-  z-index: 20;
 }
 
 .btn-scroll-style {
   background-color: var(--NeutralMedium);
-  border: 4px solid var(--White);
+  border: 4px solid var( --NeutralDark);
   border-radius: 50%;
   height: 50px;
   width: 50px;
