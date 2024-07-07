@@ -69,7 +69,7 @@ window.addEventListener("load", async () => {
     const articles = data.reverse().slice(0, 3).map((project) => {
       return jsonProjectToHtmlArticle(project);
     });
-    console.log(articles)
+
     const container = document.querySelector(".projects-container");
     container.innerHTML = "";
     articles.forEach((article) => {

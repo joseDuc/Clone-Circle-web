@@ -34,6 +34,7 @@ h1 {
   }
 
   .completed-title {
+    text-align: center;
     color: var(--NeutralDark);
     font-size: 20px;
     margin: 0;
@@ -64,4 +65,5 @@ h1 {
     }
   }
 }
+
   

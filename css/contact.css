@@ -39,14 +39,15 @@ input {
     justify-content: space-between;
     width: 100%;
     gap: 10px;
+    div {
+        width: 46%;
+        margin-block-end: 20px;
+        margin: 0;
+        margin-bottom: 20px;
+    }
 }
 
-.emailAndPhone div {
-    width: 46%;
-    margin-block-end: 20px;
-    margin: 0;
-    margin-bottom: 20px;
-}
+
 
 .name {
     width: 100%;
@@ -122,6 +123,10 @@ input {
 }
 
 @media (max-width: 800px) {
+    .formClass {
+        margin: 0px 0px;
+
+    }
     .emailAndPhone {
         display: flex;
         flex-direction: column;
@@ -135,4 +140,15 @@ input {
             width: 100%;
         }
     }
+}
+
+@media(max-width:350px) {
+
+
+
+    .header.nav {
+        justify-content: flex-start;
+    }
+
+
 }

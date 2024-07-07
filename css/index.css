@@ -248,9 +248,18 @@
 
 }
 
-@media(max-width:600px) {
+@media(max-width:720px) {
   .hero {
     flex-direction: column;
+
+
+    .hero-content {
+      .hero-content-links {
+
+        flex-direction: column;
+
+      }
+    }
 
     .hero-image {
       .img-card {
@@ -259,3 +268,4 @@
     }
   }
 }
+
